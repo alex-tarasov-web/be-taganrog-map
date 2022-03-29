@@ -1,3 +1,3 @@
 class Museum < ApplicationRecord
-  belongs_to :album
+  hes_many :media
 end
