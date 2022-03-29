@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :industries
+  resources :museums
   resources :media
   resources :albums
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

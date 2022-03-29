@@ -1,3 +1,3 @@
 class Medium < ApplicationRecord
-  has_one :album
+  belongs_to :album
 end

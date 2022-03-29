@@ -10,20 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_28_150026) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_29_114722) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "albums", force: :cascade do |t|
+    t.string "mediaUrl"
+    t.boolean "isWide"
+    t.string "textColor"
+    t.string "onMapsLink"
+    t.string "bgColor"
     t.string "name"
-    t.string "category"
+  end
+
+  create_table "industries", force: :cascade do |t|
+    t.string "mediaUrl"
+    t.boolean "isWide"
+    t.string "textColor"
+    t.string "onMapsLink"
+    t.string "bgColor"
+    t.string "name"
   end
 
   create_table "media", force: :cascade do |t|
-    t.string "name"
     t.string "type"
-    t.string "media_url"
     t.integer "album_id"
+    t.string "content"
+  end
+
+  create_table "museums", force: :cascade do |t|
+    t.string "mediaUrl"
+    t.boolean "isWide"
+    t.string "textColor"
+    t.string "onlineMuseumLink"
+    t.string "onMapsLink"
+    t.string "bgColor"
+    t.string "name"
   end
 
 end
