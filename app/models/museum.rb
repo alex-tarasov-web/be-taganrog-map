@@ -1,3 +1,3 @@
 class Museum < ApplicationRecord
-  hes_many :media
+  has_many :media
 end
