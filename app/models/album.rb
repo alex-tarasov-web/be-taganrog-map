@@ -1,3 +1,5 @@
 class Album < ApplicationRecord
-  has_many :media
+  validates :name, :bgColor, :isWide, :mediaUrl, :onMapsLink, :textColor, presence: true
+
+  has_many :medium, as: :mediumable
 end

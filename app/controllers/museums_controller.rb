@@ -1,5 +1,5 @@
 class MuseumsController < ApplicationController
-  before_action :set_museum, only: %i[ show update destroy ]
+  before_action :set_museum, only: %i[ show update destroy media ]
 
   # GET /museums
   def index
@@ -36,6 +36,10 @@ class MuseumsController < ApplicationController
   # DELETE /museums/1
   def destroy
     @museum.destroy
+  end
+
+  def media
+    render json: @museum.medium
   end
 
   private

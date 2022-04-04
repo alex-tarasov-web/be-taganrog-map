@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_29_123926) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_29_131925) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -33,9 +33,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_29_123926) do
   end
 
   create_table "media", force: :cascade do |t|
-    t.integer "album_id"
     t.string "content"
     t.string "contentType"
+    t.integer "mediumable_id"
+    t.string "mediumable_type"
   end
 
   create_table "museums", force: :cascade do |t|

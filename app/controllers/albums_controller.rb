@@ -1,5 +1,5 @@
 class AlbumsController < ApplicationController
-  before_action :set_album, only: %i[ show update destroy ]
+  before_action :set_album, only: %i[ show update destroy media ]
 
   # GET /albums
   def index
@@ -31,6 +31,10 @@ class AlbumsController < ApplicationController
     else
       render json: @album.errors, status: :unprocessable_entity
     end
+  end
+
+  def media
+    render json: @album.medium
   end
 
   # DELETE /albums/1

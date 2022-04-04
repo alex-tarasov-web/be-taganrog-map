@@ -1,5 +1,5 @@
 class IndustriesController < ApplicationController
-  before_action :set_industry, only: %i[ show update destroy ]
+  before_action :set_industry, only: %i[ show update destroy media ]
 
   # GET /industries
   def index
@@ -36,6 +36,11 @@ class IndustriesController < ApplicationController
   # DELETE /industries/1
   def destroy
     @industry.destroy
+  end
+
+  def media
+    render json: @industry.medium
+    # render body: '123'
   end
 
   private

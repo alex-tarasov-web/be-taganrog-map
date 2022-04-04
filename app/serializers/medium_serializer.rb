@@ -1,4 +1,3 @@
 class MediumSerializer < ActiveModel::Serializer
-  attributes :id, :content, :type
-  has_one :album
+  attributes :id, :content, :contentType, :mediumable_id, :mediumable_type
 end

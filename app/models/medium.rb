@@ -1,5 +1,5 @@
 class Medium < ApplicationRecord
-  belongs_to :album
-  belongs_to :museum
-  belongs_to :industry
+  validates :content, :contentType, :mediumable_id, :mediumable_type, presence: true
+
+  belongs_to :mediumable, polymorphic: true
 end
