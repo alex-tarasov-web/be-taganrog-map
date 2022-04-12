@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :singles
+  resources :discovery_audios
+  resources :discovery_videos
   resources :media
 
   resources :industries do
