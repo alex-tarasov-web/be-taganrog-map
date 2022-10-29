@@ -1,10 +1,47 @@
+do /Users/imac/.rvm/rubies/ruby-3.0.3/bin/ruby -x /Users/imac/Rails/be-taganrog-map/bin/bundle exec /Users/imac/.rvm/rubies/ruby-3.0.3/bin/ruby /Users/imac/Rails/be-taganrog-map/bin/rails routes --trace RAILS_ENV=development
+Ruby enVironment Manager 1.29.12 (latest) (c) 2009-2020 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
+
                                   Prefix Verb   URI Pattern                                                                                       Controller#Action
+                                 graphql POST   /graphql(.:format)                                                                                graphql#execute
+                                 singles GET    /singles(.:format)                                                                                singles#index
+                                         POST   /singles(.:format)                                                                                singles#create
+                                  single GET    /singles/:id(.:format)                                                                            singles#show
+                                         PATCH  /singles/:id(.:format)                                                                            singles#update
+                                         PUT    /singles/:id(.:format)                                                                            singles#update
+                                         DELETE /singles/:id(.:format)                                                                            singles#destroy
+                        discovery_audios GET    /discovery_audios(.:format)                                                                       discovery_audios#index
+                                         POST   /discovery_audios(.:format)                                                                       discovery_audios#create
+                         discovery_audio GET    /discovery_audios/:id(.:format)                                                                   discovery_audios#show
+                                         PATCH  /discovery_audios/:id(.:format)                                                                   discovery_audios#update
+                                         PUT    /discovery_audios/:id(.:format)                                                                   discovery_audios#update
+                                         DELETE /discovery_audios/:id(.:format)                                                                   discovery_audios#destroy
+                        discovery_videos GET    /discovery_videos(.:format)                                                                       discovery_videos#index
+                                         POST   /discovery_videos(.:format)                                                                       discovery_videos#create
+                         discovery_video GET    /discovery_videos/:id(.:format)                                                                   discovery_videos#show
+                                         PATCH  /discovery_videos/:id(.:format)                                                                   discovery_videos#update
+                                         PUT    /discovery_videos/:id(.:format)                                                                   discovery_videos#update
+                                         DELETE /discovery_videos/:id(.:format)                                                                   discovery_videos#destroy
                                    media GET    /media(.:format)                                                                                  media#index
                                          POST   /media(.:format)                                                                                  media#create
                                   medium GET    /media/:id(.:format)                                                                              media#show
                                          PATCH  /media/:id(.:format)                                                                              media#update
                                          PUT    /media/:id(.:format)                                                                              media#update
                                          DELETE /media/:id(.:format)                                                                              media#destroy
+                          media_industry GET    /industries/:id/media(.:format)                                                                   industries#media
+                              industries GET    /industries(.:format)                                                                             industries#index
+                                         POST   /industries(.:format)                                                                             industries#create
+                                industry GET    /industries/:id(.:format)                                                                         industries#show
+                                         PATCH  /industries/:id(.:format)                                                                         industries#update
+                                         PUT    /industries/:id(.:format)                                                                         industries#update
+                                         DELETE /industries/:id(.:format)                                                                         industries#destroy
+                            media_museum GET    /museums/:id/media(.:format)                                                                      museums#media
+                                 museums GET    /museums(.:format)                                                                                museums#index
+                                         POST   /museums(.:format)                                                                                museums#create
+                                  museum GET    /museums/:id(.:format)                                                                            museums#show
+                                         PATCH  /museums/:id(.:format)                                                                            museums#update
+                                         PUT    /museums/:id(.:format)                                                                            museums#update
+                                         DELETE /museums/:id(.:format)                                                                            museums#destroy
+                             media_album GET    /albums/:id/media(.:format)                                                                       albums#media
                                   albums GET    /albums(.:format)                                                                                 albums#index
                                          POST   /albums(.:format)                                                                                 albums#create
                                    album GET    /albums/:id(.:format)                                                                             albums#show

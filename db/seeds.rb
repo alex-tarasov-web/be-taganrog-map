@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+album1 = Album.create!(
+  id: 123,
+  mediaUrl: '123url',
+  isWide: true,
+  textColor: '123',
+  onMapsLink: '123',
+  name: 'name',
+  bgColor: '123',
+  # media: [Medium.first
+)
+
+media1 = Medium.create!(
+  id: 123,
+  content: '123',
+  contentType: 'photo',
+  mediumable_id: 123,
+  mediumable_type: 'Album',
+)
